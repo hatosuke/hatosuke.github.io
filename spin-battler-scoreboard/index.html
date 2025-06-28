@@ -3,202 +3,322 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spin Battler Scoreboard</title>
+    <title>スピンバトラースコアボード - スピニングトップバトルの新時代</title>
+    <meta name="description" content="スピニングトップバトルのスコア管理アプリ。リアルタイムスコア管理、詳細な対戦記録、プレイヤー管理システムを搭載。">
     <style>
-        body {
-            font-family: 'Arial', sans-serif;
+        * {
             margin: 0;
-            padding: 20px;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
             min-height: 100vh;
         }
         
         .container {
             max-width: 800px;
             margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
             text-align: center;
-        }
-        
-        h1 {
-            font-size: 2.5em;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 40px 30px;
             margin-bottom: 30px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
         }
         
-        .scoreboard {
-            background: rgba(255,255,255,0.1);
-            border-radius: 15px;
-            padding: 30px;
-            margin: 20px 0;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
-        }
-        
-        .player {
+        .app-icon {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            border-radius: 25px;
+            margin: 0 auto 20px;
             display: flex;
-            justify-content: space-between;
             align-items: center;
-            margin: 15px 0;
-            padding: 15px;
-            background: rgba(255,255,255,0.1);
-            border-radius: 10px;
-            transition: transform 0.3s ease;
-        }
-        
-        .player:hover {
-            transform: translateX(10px);
-        }
-        
-        .player-name {
-            font-size: 1.2em;
+            justify-content: center;
+            font-size: 48px;
+            color: white;
             font-weight: bold;
         }
         
-        .player-score {
-            font-size: 1.5em;
-            color: #ffd700;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
         
-        .add-player {
-            margin: 20px 0;
+        .subtitle {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 20px;
         }
         
-        input, button {
-            padding: 10px 15px;
-            margin: 5px;
-            border: none;
-            border-radius: 5px;
-            font-size: 1em;
+        .description {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 30px;
         }
         
-        button {
-            background: #ffd700;
+        .download-btn {
+            display: inline-block;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: transform 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 7px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .features {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 40px 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .features h2 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            text-align: center;
             color: #333;
-            cursor: pointer;
-            transition: background 0.3s ease;
         }
         
-        button:hover {
-            background: #ffed4e;
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
         }
         
-        .score-buttons {
+        .feature {
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            border-radius: 50%;
+            margin: 0 auto 20px;
             display: flex;
-            gap: 10px;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            color: white;
         }
         
-        .score-btn {
-            padding: 5px 10px;
-            font-size: 0.9em;
-            min-width: 40px;
+        .feature h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: #333;
         }
         
-        .score-btn.plus {
-            background: #4ade80;
+        .feature p {
+            color: #666;
+            line-height: 1.6;
         }
         
-        .score-btn.minus {
-            background: #f87171;
+        .feature ul {
+            text-align: left;
+            margin-top: 15px;
+            color: #666;
+        }
+        
+        .feature li {
+            margin-bottom: 8px;
+        }
+        
+        .target-audience {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 40px 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .target-audience h2 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            text-align: center;
+            color: #333;
+        }
+        
+        .audience-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .audience-item {
+            background: linear-gradient(45deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            border: 2px solid rgba(102, 126, 234, 0.2);
+        }
+        
+        .footer {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .footer-links {
+            margin-bottom: 20px;
+        }
+        
+        .footer-links a {
+            color: #667eea;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: #764ba2;
+        }
+        
+        .hashtags {
+            color: #667eea;
+            font-weight: 500;
+            margin-top: 20px;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .audience-list {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-links a {
+                display: block;
+                margin: 10px 0;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>🎮 Spin Battler Scoreboard 🎮</h1>
+        <div class="header">
+            <div class="app-icon">⚡</div>
+            <h1>スピンバトラースコアボード</h1>
+            <p class="subtitle">スピニングトップバトルの新時代到来！</p>
+            <p class="description">スコア管理アプリです。友達との対戦で活躍します。</p>
+            <a href="#" class="download-btn">App Storeでダウンロード</a>
+        </div>
         
-        <div class="scoreboard">
-            <h2>スコアボード</h2>
-            <div id="players-list">
-                <div class="player">
-                    <span class="player-name">プレイヤー1</span>
-                    <div class="score-buttons">
-                        <button class="score-btn minus" onclick="changeScore(0, -1)">-1</button>
-                        <span class="player-score" id="score-0">0</span>
-                        <button class="score-btn plus" onclick="changeScore(0, 1)">+1</button>
-                    </div>
+        <div class="features">
+            <h2>主な機能</h2>
+            <div class="feature-grid">
+                <div class="feature">
+                    <div class="feature-icon">📊</div>
+                    <h3>リアルタイムスコア管理</h3>
+                    <ul>
+                        <li>スピンフィニッシュ（1ポイント）</li>
+                        <li>バーストフィニッシュ（2ポイント）</li>
+                        <li>オーバーフィニッシュ（2ポイント）</li>
+                        <li>エクストリームフィニッシュ（3ポイント）</li>
+                    </ul>
+                    <p>ルールに完全対応した正確なポイント計算で、白熱のバトルを記録！</p>
                 </div>
-                <div class="player">
-                    <span class="player-name">プレイヤー2</span>
-                    <div class="score-buttons">
-                        <button class="score-btn minus" onclick="changeScore(1, -1)">-1</button>
-                        <span class="player-score" id="score-1">0</span>
-                        <button class="score-btn plus" onclick="changeScore(1, 1)">+1</button>
-                    </div>
+                
+                <div class="feature">
+                    <div class="feature-icon">🎯</div>
+                    <h3>直感的な操作性</h3>
+                    <ul>
+                        <li>大きなボタンでタップしやすい設計</li>
+                        <li>バトル中でも素早くスコア入力</li>
+                        <li>勝利時の華やかな演出で盛り上がり最高潮</li>
+                    </ul>
                 </div>
-            </div>
-            
-            <div class="add-player">
-                <input type="text" id="player-name" placeholder="新しいプレイヤー名">
-                <button onclick="addPlayer()">プレイヤー追加</button>
-                <button onclick="resetScores()">スコアリセット</button>
+                
+                <div class="feature">
+                    <div class="feature-icon">📈</div>
+                    <h3>詳細な対戦記録</h3>
+                    <ul>
+                        <li>全バトル履歴を自動保存</li>
+                        <li>日時・対戦相手・スコア・フィニッシュタイプを完全記録</li>
+                        <li>ラウンド別の詳細データも確認可能</li>
+                    </ul>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-icon">👥</div>
+                    <h3>プレイヤー管理システム</h3>
+                    <ul>
+                        <li>個人別勝率・対戦成績の自動計算</li>
+                        <li>対戦相手別の詳細統計データ</li>
+                        <li>星取表形式での成績一覧表示</li>
+                    </ul>
+                </div>
             </div>
         </div>
         
-        <div class="scoreboard">
-            <h3>ゲーム情報</h3>
-            <p>🎯 Spin Battlerの勝負を記録しよう！</p>
-            <p>⚡ リアルタイムでスコアを更新</p>
-            <p>🏆 最高得点者を目指せ！</p>
+        <div class="target-audience">
+            <h2>こんな方におすすめ</h2>
+            <div class="audience-list">
+                <div class="audience-item">
+                    <h3>🏆 スピニングトップ競技愛好家</h3>
+                </div>
+                <div class="audience-item">
+                    <h3>👫 友達グループでの対戦記録を残したい方</h3>
+                </div>
+                <div class="audience-item">
+                    <h3>🏫 学校・地域のトーナメント運営者</h3>
+                </div>
+                <div class="audience-item">
+                    <h3>📊 自分の成長を数値で確認したい競技者</h3>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <div class="footer-links">
+                <a href="support.html">サポート</a>
+                <a href="privacy.html">プライバシーポリシー</a>
+            </div>
+            <p><strong>アプリの魅力</strong></p>
+            <p>このアプリは単なるスコアボードではありません。戦略的で競技性の高いスポーツとして楽しむためのツールです。<br>
+            今すぐダウンロードして、あなたのスピニングトップライフを次のレベルへ押し上げましょう！</p>
+            
+            <div class="hashtags">
+                #スピニングトップ #スコアボード #対戦記録 #トーナメント #競技 #統計 #勝率 #バトル #スピン #バースト
+            </div>
         </div>
     </div>
-
-    <script>
-        let players = [
-            { name: 'プレイヤー1', score: 0 },
-            { name: 'プレイヤー2', score: 0 }
-        ];
-
-        function changeScore(playerIndex, change) {
-            players[playerIndex].score += change;
-            if (players[playerIndex].score < 0) {
-                players[playerIndex].score = 0;
-            }
-            updateDisplay();
-        }
-
-        function addPlayer() {
-            const nameInput = document.getElementById('player-name');
-            const name = nameInput.value.trim();
-            
-            if (name) {
-                players.push({ name: name, score: 0 });
-                nameInput.value = '';
-                updateDisplay();
-            }
-        }
-
-        function resetScores() {
-            players.forEach(player => player.score = 0);
-            updateDisplay();
-        }
-
-        function updateDisplay() {
-            const playersList = document.getElementById('players-list');
-            playersList.innerHTML = '';
-            
-            players.forEach((player, index) => {
-                const playerDiv = document.createElement('div');
-                playerDiv.className = 'player';
-                playerDiv.innerHTML = `
-                    <span class="player-name">${player.name}</span>
-                    <div class="score-buttons">
-                        <button class="score-btn minus" onclick="changeScore(${index}, -1)">-1</button>
-                        <span class="player-score">${player.score}</span>
-                        <button class="score-btn plus" onclick="changeScore(${index}, 1)">+1</button>
-                    </div>
-                `;
-                playersList.appendChild(playerDiv);
-            });
-        }
-
-        // Enter キーでプレイヤー追加
-        document.getElementById('player-name').addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') {
-                addPlayer();
-            }
-        });
-    </script>
 </body>
 </html>
