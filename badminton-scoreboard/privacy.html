@@ -1,1 +1,234 @@
 
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>プライバシーポリシー - バドミントンスコアボード</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f5f5f5;
+      padding: 20px;
+    }
+    
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: white;
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    
+    h1 {
+      color: #1976d2;
+      margin-bottom: 10px;
+      font-size: 2em;
+    }
+    
+    h2 {
+      color: #424242;
+      margin-top: 30px;
+      margin-bottom: 15px;
+      font-size: 1.5em;
+      border-bottom: 2px solid #e0e0e0;
+      padding-bottom: 10px;
+    }
+    
+    p {
+      margin-bottom: 15px;
+    }
+    
+    ul {
+      margin-left: 20px;
+      margin-bottom: 15px;
+    }
+    
+    li {
+      margin-bottom: 8px;
+    }
+    
+    .back-link {
+      display: inline-block;
+      margin-bottom: 20px;
+      color: #1976d2;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    
+    .back-link:hover {
+      text-decoration: underline;
+    }
+    
+    .back-link::before {
+      content: "← ";
+    }
+    
+    .intro {
+      background-color: #e3f2fd;
+      padding: 20px;
+      border-radius: 4px;
+      margin-bottom: 30px;
+      border-left: 4px solid #1976d2;
+    }
+    
+    .section {
+      margin-bottom: 30px;
+    }
+    
+    .service-list {
+      background-color: #f9f9f9;
+      padding: 15px;
+      border-radius: 4px;
+      margin-top: 10px;
+    }
+    
+    .service-list ul {
+      list-style: none;
+      margin-left: 0;
+    }
+    
+    .service-list li {
+      margin-bottom: 10px;
+      padding-left: 20px;
+      position: relative;
+    }
+    
+    .service-list li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: #1976d2;
+      font-weight: bold;
+    }
+    
+    .contact-info {
+      background-color: #e3f2fd;
+      padding: 20px;
+      border-radius: 4px;
+      margin-top: 20px;
+    }
+    
+    .contact-info strong {
+      color: #1976d2;
+    }
+    
+    .note {
+      background-color: #fff3e0;
+      padding: 15px;
+      border-left: 4px solid #ff9800;
+      border-radius: 4px;
+      margin-top: 10px;
+      font-size: 0.9em;
+    }
+    
+    @media (max-width: 600px) {
+      .container {
+        padding: 20px;
+      }
+      
+      h1 {
+        font-size: 1.5em;
+      }
+      
+      h2 {
+        font-size: 1.3em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="index.html" class="back-link">スコアボードに戻る</a>
+    
+    <h1>プライバシーポリシー</h1>
+    
+    <div class="intro">
+      <p><strong>バドミントンスコアボード</strong>（以下「当アプリ」といいます）は、ユーザーのプライバシーを尊重し、個人情報の適切な取り扱いに努めます。本プライバシーポリシーでは、当アプリにおける情報の収集・利用・共有について説明いたします。</p>
+    </div>
+    
+    <div class="section">
+      <h2>1. 収集する情報</h2>
+      <p>当アプリでは、以下の情報を収集する場合があります。</p>
+      <ul>
+        <li>デバイス情報（OSバージョン、端末機種、アプリのバージョンなど）</li>
+        <li>利用状況情報（クラッシュレポート、画面遷移、操作ログなど）</li>
+        <li>IPアドレス・地域情報（市区町村レベルまで）</li>
+      </ul>
+      <p>なお、当アプリ内で入力されたプレイヤー名、試合スコア、試合履歴などのデータは、端末内にのみ保存され、外部に送信されることはありません。</p>
+    </div>
+    
+    <div class="section">
+      <h2>2. 利用目的</h2>
+      <p>収集した情報は以下の目的で利用いたします。</p>
+      <ul>
+        <li>アプリの品質向上とバグ修正のため（Firebase Crashlytics）</li>
+        <li>利用状況の分析とサービス改善のため（Firebase Analytics）</li>
+      </ul>
+    </div>
+    
+    <div class="section">
+      <h2>3. 使用する外部サービスとそのポリシー</h2>
+      <p>当アプリでは、以下の外部サービスを利用しています。それぞれのサービスが収集するデータやその利用については、各社のプライバシーポリシーをご確認ください。</p>
+      
+      <div class="service-list">
+        <ul>
+          <li>
+            <strong>Firebase（Google LLC 提供）</strong><br>
+            ・Firebase Analytics<br>
+            ・Firebase Crashlytics<br>
+            <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google プライバシーポリシー</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="section">
+      <h2>4. 情報の第三者提供</h2>
+      <p>当アプリは、以下の場合を除き、ユーザーの情報を第三者に提供することはありません。</p>
+      <ul>
+        <li>法令に基づく場合</li>
+        <li>ユーザーの同意がある場合</li>
+        <li>当アプリの運営上、外部委託が必要な場合（契約により適切に管理）</li>
+      </ul>
+    </div>
+    
+    <div class="section">
+      <h2>5. データの保存と削除</h2>
+      <p>当アプリ内で入力されたプレイヤー名、試合スコア、試合履歴などのデータは、端末内のローカルストレージ（Hiveデータベース）に保存されます。これらのデータは、ユーザーがアプリ内の「全データ削除」機能を使用するか、アプリをアンインストールするまで保持されます。</p>
+      <p>データのバックアップについては、iCloud（iOS）やGoogle Drive（Android）などの端末のバックアップ機能に依存します。</p>
+    </div>
+    
+    <div class="section">
+      <h2>6. お問い合わせ</h2>
+      <p>本プライバシーポリシーに関するご質問・お問い合わせは、以下の連絡先までお願いいたします。</p>
+      
+      <div class="contact-info">
+        <p><strong>メールアドレス：</strong>kiyosumi.digital@gmail.com</p>
+      </div>
+    </div>
+    
+    <div class="section">
+      <h2>7. 改定について</h2>
+      <p>本プライバシーポリシーは、必要に応じて内容を変更することがあります。変更後の内容は、当アプリまたは関連ウェブサイト上に掲載された時点から適用されます。</p>
+      <div class="note">
+        <p><strong>最終更新日：</strong>2025年1月</p>
+      </div>
+    </div>
+    
+    <div style="margin-top: 40px; text-align: center;">
+      <a href="index.html" class="back-link">スコアボードに戻る</a>
+    </div>
+  </div>
+</body>
+</html>
+
