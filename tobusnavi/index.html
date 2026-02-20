@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>都バスナビ - 東京都営バス乗換案内</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f5f5f5;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: white;
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      color: #1976d2;
+      margin-bottom: 10px;
+      font-size: 2em;
+    }
+
+    h2 {
+      color: #424242;
+      margin-top: 30px;
+      margin-bottom: 15px;
+      font-size: 1.5em;
+      border-bottom: 2px solid #e0e0e0;
+      padding-bottom: 10px;
+    }
+
+    p {
+      margin-bottom: 15px;
+    }
+
+    ul {
+      margin-left: 20px;
+      margin-bottom: 15px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .header-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .header-nav-link {
+      color: #1976d2;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.95em;
+    }
+
+    .header-nav-link:hover {
+      text-decoration: underline;
+    }
+
+    .intro {
+      background-color: #e3f2fd;
+      padding: 20px;
+      border-radius: 4px;
+      margin-bottom: 30px;
+      border-left: 4px solid #1976d2;
+    }
+
+    .section {
+      margin-bottom: 30px;
+    }
+
+    .feature-box {
+      background-color: #e8f5e9;
+      padding: 15px 20px;
+      border-left: 4px solid #4caf50;
+      border-radius: 4px;
+      margin-bottom: 10px;
+    }
+
+    .feature-box strong {
+      color: #2e7d32;
+    }
+
+    .contact-info {
+      background-color: #e3f2fd;
+      padding: 20px;
+      border-radius: 4px;
+      margin-top: 20px;
+    }
+
+    .contact-info strong {
+      color: #1976d2;
+    }
+
+    .note {
+      background-color: #fff3e0;
+      padding: 15px;
+      border-left: 4px solid #ff9800;
+      border-radius: 4px;
+      margin-top: 10px;
+      font-size: 0.9em;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 1.5em;
+      }
+
+      h2 {
+        font-size: 1.3em;
+      }
+
+      .header-nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+
+      .header-nav-link {
+        align-self: flex-end;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header-nav">
+      <h1 style="margin: 0;">都バスナビ</h1>
+      <a href="privacy-policy.html" class="header-nav-link">プライバシーポリシー</a>
+    </div>
+
+    <p style="font-size: 1.1em; color: #666; margin-bottom: 30px;">東京都営バス リアルタイム位置情報・時刻表・経路案内</p>
+
+    <div class="intro">
+      <p>東京都営バスのリアルタイム位置情報と時刻表を確認できるアプリです。バスの現在位置、到着予測時間、時刻表、お気に入り路線の管理など、毎日のバス利用を便利にする機能を提供します。</p>
+    </div>
+
+    <div class="section">
+      <h2>主な機能</h2>
+
+      <div class="feature-box">
+        <p><strong>リアルタイムバス位置表示</strong></p>
+        <p>走行中のバスの現在位置をリアルタイムで確認。バス停までの到着予測時間も表示されるので、バスを待つ時間を有効に使えます。</p>
+      </div>
+
+      <div class="feature-box">
+        <p><strong>時刻表</strong></p>
+        <p>各バス停の時刻表を路線別に表示。過去の時刻はグレーアウトされ、次のバスがひと目で分かります。平日・土曜・休日ダイヤに対応。</p>
+      </div>
+
+      <div class="feature-box">
+        <p><strong>お気に入り路線</strong></p>
+        <p>よく使う路線をお気に入りに登録すると、次のバスまでの時間がすぐに確認できます。複数のバス停・路線を登録して通勤・通学に活用できます。</p>
+      </div>
+
+      <div class="feature-box">
+        <p><strong>近くのバス停検索</strong></p>
+        <p>現在地周辺のバス停を地図上に表示。タップするだけでバス停の詳細情報や時刻表を確認できます。</p>
+      </div>
+
+      <div class="feature-box">
+        <p><strong>バス接近情報</strong></p>
+        <p>バスが近づいてくる様子を進捗バーで視覚的に表示。あと何分で到着するかが直感的に分かります。</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>データ提供</h2>
+      <div class="note">
+        <p>本アプリは<a href="https://www.odpt.org/" target="_blank" rel="noopener noreferrer">公共交通オープンデータセンター（ODPT）</a>のAPIを利用して、東京都交通局のバス運行データを取得しています。</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>お問い合わせ</h2>
+      <div class="contact-info">
+        <p><strong>メールアドレス：</strong>shimamam@gmail.com</p>
+        <p><strong>GitHubリポジトリ：</strong><a href="https://github.com/hatosuke/tobusnavi" target="_blank" rel="noopener noreferrer">https://github.com/hatosuke/tobusnavi</a></p>
+      </div>
+    </div>
+
+    <div style="margin-top: 40px; text-align: center; color: #999; font-size: 0.85em;">
+      <p>&copy; 2026 Kiyosumi Digital</p>
+    </div>
+  </div>
+</body>
+</html>
