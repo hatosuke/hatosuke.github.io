@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lincoln Bus - StarTran Arrivals and Schedules</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f5f5f5;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: white;
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      color: #007c89;
+      margin-bottom: 10px;
+      font-size: 2em;
+    }
+
+    h2 {
+      color: #424242;
+      margin-top: 30px;
+      margin-bottom: 15px;
+      font-size: 1.5em;
+      border-bottom: 2px solid #e0e0e0;
+      padding-bottom: 10px;
+    }
+
+    p {
+      margin-bottom: 15px;
+    }
+
+    ul {
+      margin-left: 20px;
+      margin-bottom: 15px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .header-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .header-nav-link {
+      color: #007c89;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.95em;
+    }
+
+    .header-nav-link:hover {
+      text-decoration: underline;
+    }
+
+    .intro {
+      background-color: #e0f5f6;
+      padding: 20px;
+      border-radius: 4px;
+      margin-bottom: 30px;
+      border-left: 4px solid #007c89;
+    }
+
+    .section {
+      margin-bottom: 30px;
+    }
+
+    .feature-box {
+      background-color: #edf7e7;
+      padding: 15px 20px;
+      border-left: 4px solid #7ac143;
+      border-radius: 4px;
+      margin-bottom: 10px;
+    }
+
+    .feature-box strong {
+      color: #3c7f1e;
+    }
+
+    .contact-info {
+      background-color: #e0f5f6;
+      padding: 20px;
+      border-radius: 4px;
+      margin-top: 20px;
+    }
+
+    .contact-info strong {
+      color: #007c89;
+    }
+
+    .note {
+      background-color: #fff3e0;
+      padding: 15px;
+      border-left: 4px solid #ff9800;
+      border-radius: 4px;
+      margin-top: 10px;
+      font-size: 0.9em;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 1.5em;
+      }
+
+      h2 {
+        font-size: 1.3em;
+      }
+
+      .header-nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+
+      .header-nav-link {
+        align-self: flex-end;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header-nav">
+      <h1 style="margin: 0;">Lincoln Bus</h1>
+      <a href="privacy-policy.html" class="header-nav-link">Privacy Policy</a>
+    </div>
+
+    <p style="font-size: 1.1em; color: #666; margin-bottom: 30px;">StarTran arrivals, schedules, live buses, and nearby stops</p>
+
+    <div class="intro">
+      <p>Lincoln Bus helps riders in Lincoln, Nebraska check StarTran bus stops, timetables, live vehicle locations, and arrival estimates. The app is designed for quick everyday checks before commuting, going to school, or getting around town.</p>
+    </div>
+
+    <div class="section">
+      <h2>Main Features</h2>
+
+      <div class="feature-box">
+        <p><strong>Nearby Stops</strong></p>
+        <p>Find StarTran stops near your current location and open stop details with a tap.</p>
+      </div>
+
+      <div class="feature-box">
+        <p><strong>Timetables</strong></p>
+        <p>View stop timetables by route. Past departures are dimmed so the next buses are easy to spot.</p>
+      </div>
+
+      <div class="feature-box">
+        <p><strong>Live Bus Locations</strong></p>
+        <p>Check where buses are currently running and see arrival estimates for supported StarTran routes.</p>
+      </div>
+
+      <div class="feature-box">
+        <p><strong>Favorite Routes</strong></p>
+        <p>Save frequently used stops and routes so you can check the next bus faster.</p>
+      </div>
+
+      <div class="feature-box">
+        <p><strong>Widgets and Premium</strong></p>
+        <p>Premium is a one-time purchase that removes ads, unlocks widgets, and allows unlimited favorite routes.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Data</h2>
+      <div class="note">
+        <p>This app uses StarTran / City of Lincoln, NE transit data and GTFS Realtime feeds provided through Connexionz.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Contact</h2>
+      <div class="contact-info">
+        <p><strong>Email:</strong> kiyosumi.digital@gmail.com</p>
+      </div>
+    </div>
+
+    <div style="margin-top: 40px; text-align: center; color: #999; font-size: 0.85em;">
+      <p>&copy; 2026 Kiyosumi Digital</p>
+    </div>
+  </div>
+</body>
+</html>
