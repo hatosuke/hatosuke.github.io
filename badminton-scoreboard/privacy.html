@@ -192,19 +192,20 @@
       <h2>1. 収集する情報</h2>
       <p>当アプリでは、以下の情報を収集する場合があります。</p>
       <ul>
-        <li>デバイス情報（OSバージョン、端末機種、アプリのバージョンなど）</li>
-        <li>利用状況情報（クラッシュレポート、画面遷移、操作ログなど）</li>
-        <li>IPアドレス・地域情報（市区町村レベルまで）</li>
+        <li>Firebase Analyticsによるデバイス情報（OSバージョン、端末機種、アプリのバージョンなど）と利用状況情報（画面遷移、操作イベントなど）</li>
+        <li>Google Mobile Ads（AdMob）による広告配信・不正防止に必要なデバイス情報、識別子、広告とのやり取りに関する情報</li>
+        <li>ネットワーク接続から推定されるおおまかな地域情報</li>
       </ul>
-      <p>なお、当アプリ内で入力されたプレイヤー名、試合スコア、試合履歴などのデータは、端末内にのみ保存され、外部に送信されることはありません。</p>
+      <p>当アプリ内で入力されたプレイヤー名、試合スコア、試合履歴などのデータは端末内にのみ保存され、Firebase AnalyticsおよびAdMobへ送信しません。</p>
     </div>
     
     <div class="section">
       <h2>2. 利用目的</h2>
       <p>収集した情報は以下の目的で利用いたします。</p>
       <ul>
-        <li>アプリの品質向上とバグ修正のため（Firebase Crashlytics）</li>
         <li>利用状況の分析とサービス改善のため（Firebase Analytics）</li>
+        <li>広告の表示、広告の効果測定、不正防止のため（Google Mobile Ads / AdMob）</li>
+        <li>広告に関する同意の取得・管理、および必要な場合のプライバシー選択肢の提供のため</li>
       </ul>
     </div>
     
@@ -215,9 +216,14 @@
       <div class="service-list">
         <ul>
           <li>
-            <strong>Firebase（Google LLC 提供）</strong><br>
+            <strong>Firebase Analytics（Google LLC 提供）</strong><br>
             ・Firebase Analytics<br>
-            ・Firebase Crashlytics<br>
+            <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google プライバシーポリシー</a>
+          </li>
+          <li>
+            <strong>Google Mobile Ads / AdMob（Google LLC 提供）</strong><br>
+            ・広告の配信、測定、不正防止<br>
+            ・広告のプライバシー選択肢は、表示が必要な場合にアプリの設定画面から確認・変更できます。<br>
             <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google プライバシーポリシー</a>
           </li>
         </ul>
@@ -226,11 +232,11 @@
     
     <div class="section">
       <h2>4. 情報の第三者提供</h2>
-      <p>当アプリは、以下の場合を除き、ユーザーの情報を第三者に提供することはありません。</p>
+      <p>上記のFirebase AnalyticsおよびGoogle Mobile Ads / AdMobは、各サービスの提供、分析、広告配信、不正防止のために情報を取り扱います。各サービスにおける情報の取扱いは、Googleのプライバシーポリシーをご確認ください。</p>
       <ul>
         <li>法令に基づく場合</li>
         <li>ユーザーの同意がある場合</li>
-        <li>当アプリの運営上、外部委託が必要な場合（契約により適切に管理）</li>
+        <li>上記の外部サービスを提供するために必要な場合</li>
       </ul>
     </div>
     
@@ -253,7 +259,7 @@
       <h2>7. 改定について</h2>
       <p>本プライバシーポリシーは、必要に応じて内容を変更することがあります。変更後の内容は、当アプリまたは関連ウェブサイト上に掲載された時点から適用されます。</p>
       <div class="note">
-        <p><strong>最終更新日：</strong>2025年11月13日</p>
+        <p><strong>最終更新日：</strong>2026年10月6日</p>
       </div>
     </div>
     
@@ -263,4 +269,3 @@
   </div>
 </body>
 </html>
-
